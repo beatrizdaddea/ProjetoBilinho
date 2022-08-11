@@ -1,0 +1,8 @@
+{
+"valor_total_curso":"5000", 
+"quantidade_faturas": "10",
+ "dia_vencimento": "10",
+ "nome_curso": "moda",
+ "aluno_id": 2,
+ "instituicao_id":7
+}

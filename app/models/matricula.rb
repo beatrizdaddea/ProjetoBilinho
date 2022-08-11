@@ -9,13 +9,12 @@ class Matricula < ApplicationRecord
     validates :nome_curso, presence: true
 
     after_create :criar_fatura
-    after_create :atualizar_fatura
+    # after_create :excluir_faturas  # before_create :excluir_faturas # after_update :excluir_faturas
 
     def criar_fatura 
         valor_fatura = valor_total_curso / quantidade_faturas
 
         data = DateTime.now.to_date 
-
         dia_atual = data.day # ver o dia que está baseada na data 
 
         if dia_vencimento >= dia_atual
@@ -24,21 +23,24 @@ class Matricula < ApplicationRecord
         else
              # primeira fatura vai para o proximo mês 
             data_vencimento = data.next_month.strftime("#{dia_vencimento}/%m/%Y").to_date
-          end
+        end
         
-        faturas_criadas = 1 
+
+        faturas_criadas = 1 # controle de quantas faturas serão criadas 
 
         while faturas_criadas <= quantidade_faturas
             dia_vencimento = Date.new(data_vencimento.year, data_vencimento.month, data_vencimento.day).next_month(faturas_criadas) # vai jogar para o próximo mês 
             faturas_criadas += 1
-            Fatura.create!(valor_fatura: valor_fatura, data_vencimento: dia_vencimento, matricula_id: id, status: 'Aberta') # id_matricula --> criar no generate
+            # Usa a Classe da Fatura para criação de faturas 
+            Fatura.create(valor_fatura: valor_fatura, data_vencimento: dia_vencimento, matricula_id: id, status: 'Aberta')
+            # Fatura.save!
         end  
     end 
 
-    def atualizar_fatura  
-        faturas.map(&:destroy) # destroi as faturas antigas
+    def excluir_faturas  
+        faturas.map(&:destroy)
     end 
-
+    
 end
 
 

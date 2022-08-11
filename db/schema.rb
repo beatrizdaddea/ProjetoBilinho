@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_29_180326) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_09_182647) do
   create_table "alunos", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
@@ -28,6 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_29_180326) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "matricula_id", null: false
+    t.index ["matricula_id"], name: "index_faturas_on_matricula_id"
   end
 
   create_table "instituicaos", force: :cascade do |t|
@@ -51,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_29_180326) do
     t.index ["instituicao_id"], name: "index_matriculas_on_instituicao_id"
   end
 
+  add_foreign_key "faturas", "matriculas"
   add_foreign_key "matriculas", "alunos"
   add_foreign_key "matriculas", "instituicaos"
 end
