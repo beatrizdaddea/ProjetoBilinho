@@ -1,60 +1,27 @@
 Criar Instituição 
-    {
-        "nome":"Unip",
-        "cnpj": "63191554000133",
-        "tipo": "Universidade"
-    }
-
+    Instituicao.create!(nome: "UNIP", cnpj: "45445567890234", tipo: "Universidade")
+    
 Alterar Instituição 
-    {
-        "nome":"Unip",
-        "cnpj": "63191554000134",
-        "tipo": "Universidade"
-    }
+        Instituicao.update!(nome: "UNIP", cnpj: "45445567890233", tipo: "Universidade")
 
+Deletar Instituicao
+    Instituicao.destroy_all 
+    Deleta faturas, matriculas relacionadas a aquela Instituicao
 Criar Aluno 
-    {
-        "nome": "Beatriz Chieffi ",
-        "cpf": "84337073027",
-        "telefone": "12997564328",
-        "genero": "F",
-        "meio_pagamento": "Boleto",
-        "data_nascimento": "2001-02-08"
-    }
+    Terminal: 
+        Aluno.create!(nome: "Beatriz Chieffi", cpf: "84337073027", data_nascimento: Date.parse("08/02/2001"), telefone: "12997564328", genero: "F", meio_pagamento: "Boleto")
+
 
 Alterar Aluno 
-
-        {
-            "nome": "beatriz chieffi ",
-            "cpf": "84337073027",
-            "telefone": "12997564328",
-            "genero": "NB",
-            "meio_pagamento": "Cartão",
-            "data_nascimento": "2001-02-08"
-        }
+    Aluno.update!(nome: "Beatriz Chieffi", cpf: "84337073027", data_nascimento: Date.parse("08/02/2001"), telefone: "12997564327", genero: "F", meio_pagamento: "Cartão")
 
 
 Criar Matricula
-        {
-            "valor_total_curso":"5000", 
-            "quantidade_faturas": "10",
-            "dia_vencimento": "10",
-            "nome_curso": "moda",
-            "aluno_id": 3,
-            "instituicao_id":8
-        }
-Alterar Matricula 
-    {
-        "valor_total_curso":"5000", 
-        "quantidade_faturas": "10",
-        "dia_vencimento": "10",
-        "nome_curso": "Administração",
-        "aluno_id": 3,
-        "instituicao_id":8
-    }
+    Terminal
+    Matricula.create!(valor_total_curso: "5000", quantidade_faturas: 10, dia_vencimento: "20", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
 
-Criar Fatura 
-{
-    Cria junto com a matricula
-}
+Alterar Matricula 
+ 
+    Matricula.update!(valor_total_curso: "6000", quantidade_faturas: 10, dia_vencimento: "15", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
+
 
