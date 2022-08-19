@@ -1,8 +1,60 @@
+Criar Instituição 
+    {
+        "nome":"Unip",
+        "cnpj": "63191554000133",
+        "tipo": "Universidade"
+    }
+
+Alterar Instituição 
+    {
+        "nome":"Unip",
+        "cnpj": "63191554000134",
+        "tipo": "Universidade"
+    }
+
+Criar Aluno 
+    {
+        "nome": "Beatriz Chieffi ",
+        "cpf": "84337073027",
+        "telefone": "12997564328",
+        "genero": "F",
+        "meio_pagamento": "Boleto",
+        "data_nascimento": "2001-02-08"
+    }
+
+Alterar Aluno 
+
+        {
+            "nome": "beatriz chieffi ",
+            "cpf": "84337073027",
+            "telefone": "12997564328",
+            "genero": "NB",
+            "meio_pagamento": "Cartão",
+            "data_nascimento": "2001-02-08"
+        }
+
+
+Criar Matricula
+        {
+            "valor_total_curso":"5000", 
+            "quantidade_faturas": "10",
+            "dia_vencimento": "10",
+            "nome_curso": "moda",
+            "aluno_id": 3,
+            "instituicao_id":8
+        }
+Alterar Matricula 
+    {
+        "valor_total_curso":"5000", 
+        "quantidade_faturas": "10",
+        "dia_vencimento": "10",
+        "nome_curso": "Administração",
+        "aluno_id": 3,
+        "instituicao_id":8
+    }
+
+Criar Fatura 
 {
-"valor_total_curso":"5000", 
-"quantidade_faturas": "10",
- "dia_vencimento": "10",
- "nome_curso": "moda",
- "aluno_id": 2,
- "instituicao_id":7
+    Cria junto com a matricula
 }
+
