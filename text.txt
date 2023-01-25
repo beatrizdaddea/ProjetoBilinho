@@ -7,21 +7,19 @@ Alterar Instituição
 Deletar Instituicao
     Instituicao.destroy_all 
     Deleta faturas, matriculas relacionadas a aquela Instituicao
+
 Criar Aluno 
-    Terminal: 
         Aluno.create!(nome: "Beatriz Chieffi", cpf: "84337073027", data_nascimento: Date.parse("08/02/2001"), telefone: "12997564328", genero: "F", meio_pagamento: "Boleto")
 
 
 Alterar Aluno 
-    Aluno.update!(nome: "Beatriz Chieffi", cpf: "84337073027", data_nascimento: Date.parse("08/02/2001"), telefone: "12997564327", genero: "F", meio_pagamento: "Cartão")
+    Aluno.update!(nome: "Beatriz Chieffi", cpf: "84337073027", data_nascimento: Date.parse("08/02/2001"), telefone: "12997564317", genero: "F", meio_pagamento: "Cartão")
 
 
 Criar Matricula
-    Terminal
     Matricula.create!(valor_total_curso: "5000", quantidade_faturas: 10, dia_vencimento: "20", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
 
 Alterar Matricula 
- 
     Matricula.update!(valor_total_curso: "6000", quantidade_faturas: 10, dia_vencimento: "15", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
 
 
