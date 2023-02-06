@@ -12,9 +12,9 @@ class Matricula < ApplicationRecord
     after_update :excluir_faturas
 
     def criar_fatura 
-        valor_fatura = valor_total_curso / quantidade_faturas
+        valor_fatura = (valor_total_curso / quantidade_faturas).round(2)
 
-        data = DateTime.now.to_date 
+        data = DateTime.now.to_date
         dia_atual = data.day # ver o dia que está baseada na data 
 
         if dia_vencimento >= dia_atual

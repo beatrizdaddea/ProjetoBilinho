@@ -1,24 +1,37 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Projeto Bilinho
 
-Things you may want to cover:
+Teste técnico API Billinho, um mini projeto do Quero Pago que irá auxiliar no gerenciamento das mensalidades de alunos
 
-* Ruby version
+## Pré Requisitos
 
-* System dependencies
+- Docker: 20.10.18
+- Docker-Compose: 1.29.2
 
-* Configuration
+## Instalação
 
-* Database creation
+### Clonar projeto do Github
 
-* Database initialization
+```bash
+  git clone git@github.com:beatrizdaddea/ProjetoBilinho.git
+  cd ProjetoBilinho
+```
 
-* How to run the test suite
+### Docker 
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+Rodar: 
+ sudo docker-compose up --build ou sudo docker compose up --build
 
-* Deployment instructions
+Em outro terminal:
+ docker exec -it rails-container bash
 
-* ...
+```
+    
+## Melhorias
+
+- [ ]  Refazer API em Inglês 
+- [ ]  Tranformar em UseCase
+- [ ]  Adicionar Autenticação via Devise
+- [ ]  Adicionar Testes
+
