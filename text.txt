@@ -17,7 +17,7 @@ Alterar Aluno
 
 
 Criar Matricula
-    Matricula.create!(valor_total_curso: "5000", quantidade_faturas: 10, dia_vencimento: "20", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
+    Matricula.create!(valor_total_curso: "5000", quantidade_faturas: 20, dia_vencimento: "30", nome_curso: "Biomedicina", aluno_id: 3, instituicao_id: 4)
 
 Alterar Matricula 
     Matricula.update!(valor_total_curso: "6000", quantidade_faturas: 10, dia_vencimento: "15", nome_curso: "Biomedicina", aluno_id: 8, instituicao_id: 13)
